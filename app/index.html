@@ -16,16 +16,17 @@
       <link rel="stylesheet" href="app.css">
       <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
-    <body>
+    <body ng-controller="productsCtrl">
         <div class="navbar navbar-inverse">
             <a class="navbar-brand" href="#">Sport Store</a>
         </div>
         
         <div class="panel panel-default row">
             <div class="col-xs-3">
-                Category go here
+                <a ng-click="selectCategory()" class="btn btn-block btn-default btn-lg">Home</a>
+                <a ng-repeat="item in data.products | orderBy:'category' | unique:'category'" ng-click="selectCategory(item)" class="btn btn-block btn-default btn-lg">{{item}}</a>
             </div>
-            <div class="col-xs-8" ng-controller="productsCtrl">
+            <div class="col-xs-8">
                 <div class="well" ng-repeat="item in data.products">
                     <h3><strong>{{item.name}}</strong></h3>
                     <span class="pull-right label label-primary">{{item.price | currency}}</span>
@@ -43,5 +44,6 @@
         <script src="components/version/version-directive.js"></script>
         <script src="components/version/interpolate-filter.js"></script>
         <script src="product/products.js"></script>
+        <script src="filters/customFilters.js"></script>
     </body>
 </html>
