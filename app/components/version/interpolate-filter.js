@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.version.interpolate-filter', [])
+angular.module('sportStore.version.interpolate-filter', [])
 
 .filter('interpolate', ['version', function(version) {
   return function(text) {
