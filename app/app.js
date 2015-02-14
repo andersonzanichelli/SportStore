@@ -5,6 +5,7 @@ angular.module('sportStore', [
     'ngRoute',
     'sportStore.version',
     'sportStore.products',
+    'sportStore.productsList',
     'customFilters'
 ]).
 config(['$routeProvider', function($routeProvider) {

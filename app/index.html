@@ -21,13 +21,13 @@
             <a class="navbar-brand" href="#">Sport Store</a>
         </div>
         
-        <div class="panel panel-default row">
+        <div class="panel panel-default row" ng-controller="productsListCtrl">
             <div class="col-xs-3">
                 <a ng-click="selectCategory()" class="btn btn-block btn-default btn-lg">Home</a>
                 <a ng-repeat="item in data.products | orderBy:'category' | unique:'category'" ng-click="selectCategory(item)" class="btn btn-block btn-default btn-lg">{{item}}</a>
             </div>
             <div class="col-xs-8">
-                <div class="well" ng-repeat="item in data.products">
+                <div class="well" ng-repeat="item in data.products | filter:categoryFilterFn">
                     <h3><strong>{{item.name}}</strong></h3>
                     <span class="pull-right label label-primary">{{item.price | currency}}</span>
                     <span class="lead">{{item.description}}</span>
@@ -44,6 +44,7 @@
         <script src="components/version/version-directive.js"></script>
         <script src="components/version/interpolate-filter.js"></script>
         <script src="product/products.js"></script>
+        <script src="product/productsList.js"></script>
         <script src="filters/customFilters.js"></script>
     </body>
 </html>
