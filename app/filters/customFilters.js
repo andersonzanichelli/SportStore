@@ -36,7 +36,7 @@ angular.module('customFilters', [])
         if(angular.isArray(data)){
             var result = [];
             for(var i = 0; i < Math.ceil(data.length / size); i++){
-                return result.push(i);
+                result.push(i);
             }
             return result;
         } else {
