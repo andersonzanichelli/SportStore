@@ -7,7 +7,7 @@ angular.module('sportStore', [
     'sportStore.products',
     'sportStore.productsList',
     'customFilters'
-]).
-config(['$routeProvider', function($routeProvider) {
+])
+.config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/'});
 }]);
