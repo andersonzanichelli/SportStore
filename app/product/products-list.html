@@ -5,8 +5,11 @@
     </div>
     <div class="col-xs-8">
         <div class="well" ng-repeat="item in data.products | filter:categoryFilterFn | range:selectedPage:pageSize">
-            <h3><strong>{{item.name}}</strong></h3>
-            <span class="pull-right label label-primary">{{item.price | currency}}</span>
+            <h3>
+                <strong>{{item.name}}</strong>
+                <span class="pull-right label label-primary">{{item.price | currency}}</span>
+            </h3>
+            <button class='btn btn-success pull-right' ng-click='addProductToCart(item)'>Add to cart</button>
             <span class="lead">{{item.description}}</span>
         </div>
         <div class="pull-right btn-group">

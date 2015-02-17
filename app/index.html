@@ -19,6 +19,7 @@
     <body ng-controller="productsCtrl">
         <div class="navbar navbar-inverse">
             <a class="navbar-brand" href="#">Sport Store</a>
+            <cart-sumary />
         </div>
 
         <div class="alert alert-danger" ng-show="data.error">
@@ -28,7 +29,7 @@
         <products-list></products-list>
 
         <!--  Footer -->
-        <div class="panel-footer small">SportStore v<span app-version></span></div>
+        <div class="small">SportStore v<span app-version></span></div>
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-route/angular-route.js"></script>
         <script src="app.js"></script>
@@ -38,5 +39,6 @@
         <script src="product/products.js"></script>
         <script src="product/productsList.js"></script>
         <script src="filters/customFilters.js"></script>
+        <script src="modules/cart.js"></script>
     </body>
 </html>

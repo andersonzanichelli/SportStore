@@ -6,7 +6,8 @@ angular.module('sportStore', [
     'sportStore.version',
     'sportStore.products',
     'sportStore.productsList',
-    'customFilters'
+    'customFilters',
+    'cart'
 ])
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/'});
