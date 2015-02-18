@@ -1,6 +1,6 @@
 angular.module('sportStore.products', [
 ])
-.constant('dataUrl', 'http://localhost:9000/api/products')
+.constant('dataUrl', 'https://jsonlab-andersonzanichelli.c9.io/api/products')
 .directive('productsList', function(){
     return {
         restrict: 'E',
