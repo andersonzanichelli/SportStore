@@ -26,7 +26,7 @@
           Error ({{data.error.status}}). The product data was not loaded. <a href="#" class="alert-link">Click here to try again</a>
         </div>
         
-        <products-list></products-list>
+        <ng-view />
 
         <!--  Footer -->
         <div class="small">SportStore v<span app-version></span></div>
@@ -39,6 +39,7 @@
         <script src="product/products.js"></script>
         <script src="product/productsList.js"></script>
         <script src="filters/customFilters.js"></script>
-        <script src="modules/cart.js"></script>
+        <script src="cart/cart.js"></script>
+        <script src="cart/checkout.js"></script>
     </body>
 </html>

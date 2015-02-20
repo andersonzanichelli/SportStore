@@ -16,10 +16,19 @@ angular.module("cart", [])
 			}
 		},
 
+		delProduct: function(id){
+			for(var i = 0; i < cartData.length; i++){
+				if(cartData[i].id === id) {
+					cartData[i].count--;
+					break;
+				}
+			}
+		},
+
 		removeProduct: function(id){
 			for(var i = 0; i < cartData.length; i++){
 				if(cartData[i].id == id){
-					cartData.slice(i, 1);
+					cartData.splice(i, 1);
 					break;
 				}
 			}
@@ -33,7 +42,7 @@ angular.module("cart", [])
 .directive('cartSumary', function(cart){
 	return{
 		restrict: 'E',
-		templateUrl: 'modules/cart-sumary.html',
+		templateUrl: 'cart/cart-sumary.html',
 		controller: function($scope){
 			var cartData = cart.getProducts();
 
